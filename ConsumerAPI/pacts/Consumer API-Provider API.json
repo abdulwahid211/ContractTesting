@@ -1,0 +1,78 @@
+{
+  "consumer": {
+    "name": "Consumer API"
+  },
+  "interactions": [
+    {
+      "description": "A GET request to /api/Order",
+      "providerStates": [
+        {
+          "name": "There is available data"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/api/Order",
+        "query": {
+          "id": [
+            "10"
+          ]
+        }
+      },
+      "response": {
+        "body": {
+          "Id": 10,
+          "Name": "Test",
+          "Price": 24
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    },
+    {
+      "description": "A post request to /api/Order/post",
+      "providerStates": [
+        {
+          "name": "There is available data"
+        }
+      ],
+      "request": {
+        "body": {
+          "Id": 20,
+          "Name": "Test",
+          "Price": 24
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "method": "POST",
+        "path": "/api/Order/post"
+      },
+      "response": {
+        "body": {
+          "Id": 20,
+          "Name": "Test",
+          "Price": 24
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pactRust": {
+      "ffi": "0.4.0",
+      "models": "1.0.4"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "Provider API"
+  }
+}
